@@ -78,7 +78,13 @@ look at it funny.
 It was also only tested with my Logitech G935 and G533 headsets, so some
 features may not work.
 
+## License
+
+Released under the MIT license.
+
 ## Acknowledgements
 
-All the heavy lifting is done by [HeadsetControl](https://github.com/Sapd/HeadsetControl). If this is useful to you in any way, please consider sponsoring
+All the heavy lifting is done by [HeadsetControl](https://github.com/Sapd/HeadsetControl).
+
+If this plasmoid is useful to you in any way, please consider sponsoring
 that project.

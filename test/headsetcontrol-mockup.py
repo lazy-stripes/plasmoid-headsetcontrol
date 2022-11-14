@@ -154,8 +154,6 @@ if __name__ == "__main__":
     if args.equalizer_preset is not None:
         sys.exit(generic_command('p'))
 
-    print(args)
-
     # Mimick default behavior if no arguments.
     if not args.short_output:
         print("You didn't set any arguments, so nothing happened.")
