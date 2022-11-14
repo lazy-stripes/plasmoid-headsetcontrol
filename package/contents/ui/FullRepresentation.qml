@@ -10,7 +10,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 ColumnLayout {
     id: fullRoot
 
-    //Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     PlasmaExtras.Heading {
         Layout.fillWidth: true
@@ -24,7 +24,7 @@ ColumnLayout {
         text: headsetcontrol.status
     }
 
-    // Why there is no separator Component built-in is beyond me.
+    // Separator
     Item {
         height: headsetStatus.height
 
@@ -43,10 +43,9 @@ ColumnLayout {
         }
     }
 
-
     RowLayout {
         id: featureSidetone
-        visible: headsetcontrol.features.includes("s")
+        visible: headsetcontrol.available && headsetcontrol.features.includes("s")
 
         Layout.fillHeight: false
         Layout.fillWidth: true
@@ -74,7 +73,7 @@ ColumnLayout {
 
     RowLayout {
         id: featureLights
-        visible: headsetcontrol.features.includes("l")
+        visible: headsetcontrol.available && headsetcontrol.features.includes("l")
 
         Layout.fillHeight: false
         Layout.fillWidth: true
@@ -94,7 +93,7 @@ ColumnLayout {
 
     RowLayout {
         id: featureVoicePrompt
-        visible: headsetcontrol.features.includes("v")
+        visible: headsetcontrol.available && headsetcontrol.features.includes("v")
 
         Layout.fillHeight: false
         Layout.fillWidth: true
@@ -114,7 +113,7 @@ ColumnLayout {
 
     RowLayout {
         id: featureRotateToMute
-        visible: headsetcontrol.features.includes("r")
+        visible: headsetcontrol.available && headsetcontrol.features.includes("r")
 
         Layout.fillHeight: false
         Layout.fillWidth: true
